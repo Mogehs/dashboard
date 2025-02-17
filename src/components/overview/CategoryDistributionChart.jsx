@@ -12,8 +12,8 @@ const categoryData = [
   { name: "BMW", value: 4500 },
   { name: "Audi", value: 3200 },
   { name: "Porchue", value: 2800 },
-  { name: "", value: 2100 },
-  { name: "Sports & Outdoors", value: 1900 },
+  { name: "Buggati", value: 2100 },
+  { name: "Ferrari", value: 1900 },
 ];
 
 const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
