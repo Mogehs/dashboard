@@ -7,7 +7,6 @@ const AddProduct = ({ isOpen, onClose, onAdd }) => {
     category: "",
     price: "",
     stock: "",
-    sales: "",
     image: null,
   });
 
@@ -96,27 +95,25 @@ const AddProduct = ({ isOpen, onClose, onAdd }) => {
         </h2>
 
         <form onSubmit={handleSubmit}>
-          {["name", "category", "price", "stock", "sales"].map(
-            (field, index) => (
-              <div key={index} className="mb-3">
-                <label className="block text-sm font-medium text-gray-700 capitalize">
-                  {field}:
-                </label>
-                <input
-                  type={
-                    field === "price" || field === "stock" || field === "sales"
-                      ? "number"
-                      : "text"
-                  }
-                  name={field}
-                  value={product[field]}
-                  onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition"
-                  required
-                />
-              </div>
-            )
-          )}
+          {["name", "category", "price", "stock"].map((field, index) => (
+            <div key={index} className="mb-3">
+              <label className="block text-sm font-medium text-gray-700 capitalize">
+                {field}:
+              </label>
+              <input
+                type={
+                  field === "price" || field === "stock" || field === "sales"
+                    ? "number"
+                    : "text"
+                }
+                name={field}
+                value={product[field]}
+                onChange={handleChange}
+                className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition"
+                required
+              />
+            </div>
+          ))}
 
           {/* Image Upload Field */}
           <div className="mb-3">
